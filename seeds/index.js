@@ -21,9 +21,13 @@ const seedDb = async() => {
     await Product.deleteMany({});
     for (let i=0; i<9; i++){
         const random = Math.floor(Math.random() * 10);
+        const price = Math.floor(Math.random() * 50) + 10  
         const prod = new Product ({
             location: `${areas[random].city}, ${areas[random].area}`,
-            title: `${sample(descriptors)}`
+            title: `${sample(descriptors)}`,
+            image: 'https://source.unsplash.com/collection/362271',
+            description: "here is my barley used canon, with lens, battery and charger. Everything for only 5 pounds per day",
+            price
         })
         await prod.save();
     }

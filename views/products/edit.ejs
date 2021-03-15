@@ -11,7 +11,7 @@
 
 <body>
     <h1>Edit Product description</h1>
-    <form action="/products" method="POST">
+    <form action="/products/<%=product._id%>?_method=PUT" method="POST">
         <div>
             <label for="title">Title:</label>
             <input type="text" name="product[title]" id="title" value="<%=product.title %>">
@@ -20,7 +20,8 @@
             <label for="location">Location:</label>
             <input type="text" name="product[location]" id="location" value="<%=product.location %>">
         </div>
-        <a href="/products/<%= products._id%>">Back to the list of products</a>
+        <button>update</button>
+        <a href="/products/<%= product._id%>">Back to the list of products</a>
     </form>
 </body>
 
