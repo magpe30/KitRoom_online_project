@@ -10,6 +10,9 @@ body{
   background: -webkit-linear-gradient(to right, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+a{
+    text-decoration: none !important;
+}
 nav img{
     width: 50px;
     margin-left: 20px;
@@ -32,18 +35,62 @@ h1{
 footer{
     background: #00E192;
 }
+
+.container{
+    font-family:'Josefin Sans', sans-serif; 
+    margin: 10px 0; 
+}
+.new-product-container{
+    margin-top: 40px;
+}
+input{
+    background: transparent;
+}
+.fa-arrow-right{
+    margin-left: 10px;
+}
+/* Show page css */
+
+.show-page-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.show-page-img{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+.operation-buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    align-items: center;
+}
+.show-page-text{
+    margin: 30px 30px 50px 0;
+}
+
+/* button styles */
+
 .btn-1{
     outline: none;
     background-color: #FFB612;
     border-radius: 20px;
     color: #fff;
     border: none;
-    padding: 10px 15px;
+    padding: 15px 25px;
 }
-.container{
-    font-family:'Josefin Sans', sans-serif; 
-    margin: 10px 0; 
+.btn-1:hover{
+    color: #0D6EFD;
 }
-input{
-    background: transparent;
+.submit-btn{
+    background-color: #FFB612; 
+}
+.operation-btn{
+   background-color:  #000;
+}
+.delete-btn{
+    background-color:#FD5B2A;  
 }

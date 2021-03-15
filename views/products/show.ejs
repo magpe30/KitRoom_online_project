@@ -1,14 +1,25 @@
 <%- include('../partials/header') %>
 <%- include('../partials/navbar') %>
-    <h1><%= product.title %></h1>
-    <h2><%= product.location %></h2>
-    <img src=<%= product.image %> alt="equipment image">
-    <p><%= product.description %></p>
-    <a href="/products/<%=product._id%>/edit">Edit</a>
-    <p>
-      <form action="/products/<%=product._id %>?_method=DELETE" method="POST">
-          <button>Delete</button>
-      </form>
-    </p>
-    <a href="/products">All Products</a>
+<div class="container show-page-container">
+    <div class="main-content">
+        <img class="show-page-img" src=<%= product.image %> alt="equipment image">
+        <div class="show-page-text">
+            <h3>Description</h3>
+            <p><%= product.description %></p>
+        </div>
+        <div class="operation-buttons">
+            <a class="btn-1 operation-btn" href="/products/<%=product._id%>/edit">Edit</a>
+            <p>
+                <form action="/products/<%=product._id %>?_method=DELETE" method="POST">
+                    <button class="btn-1 delete-btn">Delete</button>
+                </form>
+            </p>
+            <a href="/products">All Products<i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="show-page-title-area">
+        <h1><%= product.title %></h1>
+        <h4 class="text-muted"><%= product.location %></h4>
+    </div>
+</div>
 <%-include('../partials/footer') %>
